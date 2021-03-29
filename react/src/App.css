@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+label {
+  font-weight: 600;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button.signin-btn,
+.signin-link {
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+button.signin-btn {
+  border: none;
+  background-color: rgb(255, 30, 0);
+  color: rgb(255, 221, 221);
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+button.signin-btn:hover {
+  animation: signin 2s infinite;
+  transition: all 0.5s ease-in-out;
+}
+@keyframes signin {
+  0% {
+    background-color: rgb(255, 30, 0);
+    color: white;
+  }
+  50% {
+    background-color: rgb(252, 219, 215);
+    color: black;
+  }
+  100% {
+    background-color: rgb(255, 30, 0);
+    color: white;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.signin-link span {
+  color: rgb(71, 71, 250);
 }
 
-.App-link {
-  color: #61dafb;
+.signin-link span:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.log-in-col input {
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+}
+
+.log-in-col input:focus {
+  outline: currentColor;
+  box-shadow: 0 0.1rem rgb(255, 30, 0);
+  transition: all 0.3s ease-in;
+  border: none;
+}
+
+.form-group {
+  position: relative;
+}
+
+.p-v {
+  position: absolute;
+  right: 0;
+  bottom: 25%;
+  font-size: 1.1rem;
+  cursor: pointer;
 }
