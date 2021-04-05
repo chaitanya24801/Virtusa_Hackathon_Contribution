@@ -15,10 +15,11 @@ const Login = ({
 }) => {
   return (
     <>
-      <Form>
+      <Form id="loginBox" className="form">
         <FormGroup>
           <FormLabel>Username</FormLabel>
           <FormControl
+          id="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             type="text"
@@ -47,6 +48,7 @@ const Login = ({
         <FormGroup>
           <FormLabel className="signin-link">
             <span
+            id="signupLink"
               onClick={() => {
                 setSignIn(false);
                 setIsPasswordVisible(false);
